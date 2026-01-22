@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model FirstResponsiveWebAppMortenson.Models.UserModel
+@*Page Title for results*@
+@{
+    ViewData["Title"] = "Birthday Results";
+}
+
+@*display of result after calculation, displayed inthe center of a card*@
+<div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+        <div class="card shadow-sm">
+            <div class="card-body p-4">
+
+                <h2 class="h4 mb-3">Birthday Results</h2>
+
+                @*User Name display with greeting*@
+                <p class="mb-2">
+                    Hello, <strong>@Model.Name</strong>!
+                </p>
+
+                @*calculated age and date display*@
+                <p class="mb-3">
+                    This year you will be
+                    <strong>@Model.AgeThisYear</strong>
+                    years old on
+                    <strong>December 31, @Model.CurrentYear</strong>.
+                </p>
+                @*return button to go back to the index/home page*@
+                <a asp-action="Index" class="btn btn-outline-primary">Return</a>
+
+            </div>
+     </div>
+          </div>
+</div>
